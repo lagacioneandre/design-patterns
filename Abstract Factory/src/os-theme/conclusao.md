@@ -1,0 +1,3 @@
+O padrao Abstract Factory 'e excelente para adicionar novas familias de produtos (aberto para extensao nesse sentido, fechado para modificacao das familias existentes). no entantao, ele nao 'e ideal para adicionar novos tipos de produtos em uma familia existente sem modificar o codigo existente da fabrica abstrata e de suas implementacoes concretas, que viola o principio Aberto/Fechado (OCP) para essa parte do sistema.
+
+'E uma troca, voce ganha forte consistencia entre os produtos de uma familia e facilita na troca de familias, mas paga com a rigidez na adicao de novos tipos de produtos.
