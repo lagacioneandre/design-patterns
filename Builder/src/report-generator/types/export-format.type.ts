@@ -1,0 +1,1 @@
+export type ExportFormat = 'PDF' | 'CSV' | 'JSON';
