@@ -1,0 +1,1 @@
+export type Status = 'PENDING' | 'RUNNING' | 'ERROR';
