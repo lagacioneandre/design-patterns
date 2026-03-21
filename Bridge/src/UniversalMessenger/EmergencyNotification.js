@@ -1,0 +1,32 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EmergencyNotification = void 0;
+var Notification_1 = require("./Notification");
+var EmergencyNotification = /** @class */ (function (_super) {
+    __extends(EmergencyNotification, _super);
+    function EmergencyNotification(notificationChannel, message) {
+        var _this = _super.call(this, notificationChannel) || this;
+        _this.message = message;
+        return _this;
+    }
+    EmergencyNotification.prototype.send = function () {
+        this.notificationChannel.sendData("[ALERTA DE SEGURAN\u00C7A] ".concat(this.message.toLocaleUpperCase()));
+    };
+    return EmergencyNotification;
+}(Notification_1.Notification));
+exports.EmergencyNotification = EmergencyNotification;
